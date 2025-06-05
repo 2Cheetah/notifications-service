@@ -1,0 +1,20 @@
+{
+	"name": "Notifications Service",
+	"dockerComposeFile": "docker-compose.devcontainer.yml",
+	"service": "notifications-service",
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go",
+				"ms-azuretools.vscode-docker",
+				"GitHub.vscode-pull-request-github",
+				"DavidAnson.vscode-markdownlint",
+				"redhat.vscode-yaml",
+				"bierner.markdown-mermaid"
+			]
+		}
+	}
+
+}

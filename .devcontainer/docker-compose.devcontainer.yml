@@ -1,0 +1,6 @@
+services:
+  notifications-service:
+    image: 2cheetah/golang-custom:latest
+    command: ["sleep", "infinity"]
+    volumes:
+      - ..:/workspace:cached

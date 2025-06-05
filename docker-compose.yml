@@ -1,0 +1,5 @@
+services:
+  notifications-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
