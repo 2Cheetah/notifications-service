@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"io"
-	"log"
 	"log/slog"
 	"net/http"
 )
@@ -17,7 +16,9 @@ func main() {
 func EchoHandler(w http.ResponseWriter, r *http.Request) {
 	body, err := io.ReadAll(r.Body)
 	if err != nil {
-		log.Fatal(err)
+		http.Error(w, "Failed to read request body", http.StatusInternalServerError)
+		slog.Error("failed to read request body", "error", err)
+		return
 	}
 	fmt.Fprint(w, string(body))
 }
